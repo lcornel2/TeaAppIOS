@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RsI-OA-6xe">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz Questions-->
+        <scene sceneID="Nd2-Ul-hIm">
+            <objects>
+                <viewController storyboardIdentifier="quiz" title="Quiz Questions" id="lL9-sw-kYo" customClass="TeaQuizViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZB7-ht-IKx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iln-Ss-SKa">
+                                <rect key="frame" x="10" y="10" width="394" height="220"/>
+                                <color key="backgroundColor" red="0.6159859486" green="0.55644194219999998" blue="0.7104872887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="220" id="qyo-Rt-1qP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6U5-fn-zEg">
+                                <rect key="frame" x="0.0" y="230" width="414" height="544"/>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="HDx-kJ-Whc" rowHeight="125" style="IBUITableViewCellStyleDefault" id="blc-p6-GaR">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="125"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="blc-p6-GaR" id="zJ1-6f-ThB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HDx-kJ-Whc">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="30"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3DL-Uz-bSX"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3DL-Uz-bSX" firstAttribute="bottom" secondItem="6U5-fn-zEg" secondAttribute="bottom" id="52M-sJ-itf"/>
+                            <constraint firstItem="3DL-Uz-bSX" firstAttribute="trailing" secondItem="Iln-Ss-SKa" secondAttribute="trailing" constant="10" id="5UJ-eP-eNI"/>
+                            <constraint firstItem="Iln-Ss-SKa" firstAttribute="top" secondItem="3DL-Uz-bSX" secondAttribute="top" constant="10" id="Og8-RG-v0f"/>
+                            <constraint firstItem="6U5-fn-zEg" firstAttribute="leading" secondItem="3DL-Uz-bSX" secondAttribute="leading" id="Rr7-IJ-g5f"/>
+                            <constraint firstItem="6U5-fn-zEg" firstAttribute="top" secondItem="Iln-Ss-SKa" secondAttribute="bottom" id="dFD-9r-Y9p"/>
+                            <constraint firstItem="Iln-Ss-SKa" firstAttribute="leading" secondItem="3DL-Uz-bSX" secondAttribute="leading" constant="10" id="hcH-iX-Xzn"/>
+                            <constraint firstItem="3DL-Uz-bSX" firstAttribute="trailing" secondItem="6U5-fn-zEg" secondAttribute="trailing" id="zFk-UR-X05"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QXt-5P-nSM"/>
+                    <connections>
+                        <outlet property="label" destination="Iln-Ss-SKa" id="uf1-ma-QUl"/>
+                        <outlet property="table" destination="6U5-fn-zEg" id="RgE-cI-GQ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3mk-dx-ZYH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="-427"/>
+        </scene>
+        <!--Green Tea View Controller-->
+        <scene sceneID="ouK-oz-CNd">
+            <objects>
+                <viewController storyboardIdentifier="greentea" id="KGx-Ls-aYX" customClass="GreenTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TvS-aX-htM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCV-sp-qw5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5uL-9m-TaU">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Green tea, which originated in East Asia, is the one of the least oxidized of all the different kinds of tea. This means that it has more flavor and is pale green in color. There are many different varieties of green tea, not to get confused with different blends, depending on where it is produced which results in differing flavor notes. The different blends of tea result from the oxidized tea leaves being mixed with other plants, oils, or other spices.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greentea" translatesAutoresizingMaskIntoConstraints="NO" id="iNv-pr-7M3">
+                                <rect key="frame" x="94" y="147" width="225" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bAQ-6V-n3z"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KB7-Dh-suh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1738" y="-433"/>
+        </scene>
+        <!--Oolong Tea View Controller-->
+        <scene sceneID="HDg-YX-rv9">
+            <objects>
+                <viewController storyboardIdentifier="oolongtea" id="qz8-3o-od7" customClass="OolongTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sfU-lQ-Sd6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oolong Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuW-RM-ACg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Eq-Gr-YT0">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Oolong tea, also known as 'Black Dragon' is similar to black tea and contains and varying amount of caffiene. However, the taste can vary greatly from being sweet and fuity to a smokey woodsy aroma to even a fresh and complex taste. All of these different varieties depend on how they are produced and processed.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oolongtea" translatesAutoresizingMaskIntoConstraints="NO" id="Wry-yC-6uo">
+                                <rect key="frame" x="95" y="147" width="225" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dPm-eX-zGD"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Tg-af-02D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="-1102"/>
+        </scene>
+        <!--White Tea View Controller-->
+        <scene sceneID="9BK-5n-NNc">
+            <objects>
+                <viewController storyboardIdentifier="whitetea" id="DaU-vZ-sX9" customClass="WhiteTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wVS-UV-LOs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="White Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCK-u1-eE2">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9M-DE-ViZ">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">White tea is similar to green tea in which is has a very pale yellow color as well as a mild but sweet earthy flavor. It's name comes from the white hairs on the bud of the tea plant which gives the plant a white appearence. White tea is mainly produced in China but is slowly moving towards Easter Nepal, Taiwan, and Thailand.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitetea" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-dO-GPE">
+                                <rect key="frame" x="94" y="147" width="225" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bO6-Si-2VE"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVP-sE-0oJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="-441"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bqs-jf-dPt">
+            <objects>
+                <navigationController id="1xv-UQ-4jj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="gBU-g6-Uhu">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LGj-7N-Fa9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6AT-ig-G5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="-1102"/>
+        </scene>
+        <!--Black Tea-->
+        <scene sceneID="dqe-oU-Mh7">
+            <objects>
+                <viewController storyboardIdentifier="blacktea" title="Black Tea" id="IGh-aj-7iP" customClass="BlackTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3VC-5r-Kf0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Black Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii3-7j-e6N">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="7to-OF-DQp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rCJ-yK-BZw">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <string key="text">Black tea, which originated in East Asia, is the most oxidated of all the different kinds of tea. This means that it has a stronger flavor and is darkest in color. There are many different varieties of black tea, not to get confused with different blends, depending on where it is produced which results in differing flavor notes. The different blends of tea result from the oxidized tea leaves being mixed with other plants, oils, or other spices.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blacktea" translatesAutoresizingMaskIntoConstraints="NO" id="1Ko-bU-bga">
+                                <rect key="frame" x="94.5" y="147" width="225" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="07j-mk-iWO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="huT-YL-NcM"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="huT-YL-NcM" firstAttribute="trailing" secondItem="ii3-7j-e6N" secondAttribute="trailing" id="6Sg-BH-B76"/>
+                            <constraint firstItem="rCJ-yK-BZw" firstAttribute="centerY" secondItem="3VC-5r-Kf0" secondAttribute="centerY" id="EHU-nR-Rqt"/>
+                            <constraint firstItem="ii3-7j-e6N" firstAttribute="top" secondItem="huT-YL-NcM" secondAttribute="top" id="HDg-Fw-jTs"/>
+                            <constraint firstItem="ii3-7j-e6N" firstAttribute="leading" secondItem="huT-YL-NcM" secondAttribute="leading" id="J5Y-rk-ffX"/>
+                            <constraint firstItem="rCJ-yK-BZw" firstAttribute="leading" secondItem="3VC-5r-Kf0" secondAttribute="leading" constant="20" id="MAE-Gs-RUe"/>
+                            <constraint firstItem="1Ko-bU-bga" firstAttribute="top" secondItem="3VC-5r-Kf0" secondAttribute="topMargin" constant="103" id="XOm-wz-0bw"/>
+                            <constraint firstAttribute="trailing" secondItem="rCJ-yK-BZw" secondAttribute="trailing" constant="20" id="ae3-Tf-JdS"/>
+                            <constraint firstItem="1Ko-bU-bga" firstAttribute="centerX" secondItem="3VC-5r-Kf0" secondAttribute="centerX" id="uLt-9S-fuK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" enabled="NO" title="" id="Vc0-2A-T9X"/>
+                    <navigationItem key="navigationItem" title="Result" id="smq-JD-HZ1">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="RkZ-cG-7vz"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgy-hs-UkY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1732" y="-1102"/>
+        </scene>
+        <!--Quiz-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Quiz" id="BYZ-38-t0r" customClass="ViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tea Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzH-a8-0Mf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" red="0.6159859486" green="0.55644194219999998" blue="0.7104872887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="WTu-UB-35v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVk-Re-EeG">
+                                <rect key="frame" x="107" y="379" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.6159859486" green="0.55644194219999998" blue="0.7104872887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="FZ7-yl-LXb"/>
+                                    <constraint firstAttribute="height" constant="50" id="Lk6-Cl-LyF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startQuiz" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ma-h4-cVo"/>
+                                    <segue destination="lL9-sw-kYo" kind="show" id="gwW-8j-xze"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teaset" translatesAutoresizingMaskIntoConstraints="NO" id="0Oy-Hw-hyW">
+                                <rect key="frame" x="0.0" y="58" width="414" height="177"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="177" id="lIU-qA-ZHw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Oy-Hw-hyW" firstAttribute="top" secondItem="qzH-a8-0Mf" secondAttribute="bottom" constant="8" symbolic="YES" id="4K5-4H-oom"/>
+                            <constraint firstItem="qzH-a8-0Mf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9bb-Lu-0OZ"/>
+                            <constraint firstItem="ZVk-Re-EeG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dgs-kH-n2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qzH-a8-0Mf" secondAttribute="trailing" id="HU7-SN-Fa3"/>
+                            <constraint firstItem="0Oy-Hw-hyW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hqc-9r-gUa"/>
+                            <constraint firstItem="ZVk-Re-EeG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IRy-WJ-Tzv"/>
+                            <constraint firstItem="ZVk-Re-EeG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TYs-en-DUz"/>
+                            <constraint firstItem="qzH-a8-0Mf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eOJ-Wm-Ah0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Oy-Hw-hyW" secondAttribute="trailing" id="rbL-VN-Iyy"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Take the Quiz" image="person.fill.questionmark" catalog="system" id="5O5-W9-SGc"/>
+                    <navigationItem key="navigationItem" id="225-aT-dgX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="-427.23214285714283"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Ju2-cD-fxD">
+            <objects>
+                <viewController storyboardIdentifier="Home" title="Home" id="Jsa-uw-JZl" customClass="HomeViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mYY-gO-b4M">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to Tea Time!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jAD-KK-L97">
+                                <rect key="frame" x="0.0" y="44" width="414" height="161"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.6159859486" green="0.55644194219999998" blue="0.7104872887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZ3-t3-t74">
+                                <rect key="frame" x="20" y="278" width="374" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Hello! Whether you are an avid tea drinker, someone just starting to learn more about tea, or someone who just wants to learn more, you've come to the right place!</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgy-Yv-gby">
+                                <rect key="frame" x="20" y="469" width="374" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">If you are wanting to learn more, just click the "Learn More" tab at the bottom of the screen to learn about the different kinds of tea, how they are made, how to brew the perfect cup, and some fun facts!</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Want to Learn More?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YDy-Tj-6N9">
+                                <rect key="frame" x="20" y="404" width="374" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Begin Here!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcK-GD-f8G">
+                                <rect key="frame" x="20" y="213" width="374" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unsure?" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkJ-zH-dz5">
+                                <rect key="frame" x="20" y="591" width="374" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8b-J5-YsA">
+                                <rect key="frame" x="20" y="656" width="374" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">If you are new to tea drinking or in a mood  to try new things and do not know what type of tea to drink, take the quiz below to find out what suits you best!</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Si-hR-A7P"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="Ojb-DU-xOJ"/>
+                    <navigationItem key="navigationItem" title="Home" id="xK4-Yt-h6V">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="5aE-Rz-rpd"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97g-NN-3QI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-900" y="609"/>
+        </scene>
+        <!--Types-->
+        <scene sceneID="jmd-mf-K2e">
+            <objects>
+                <tableViewController title="Types" id="4WE-dx-Eub" customClass="TeaTableViewTableViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="OVR-rJ-79S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="black" textLabel="2Fa-dP-Gez" imageView="4Gf-HL-KtR" rowHeight="100" style="IBUITableViewCellStyleDefault" id="DsW-VV-MVz">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DsW-VV-MVz" id="Vh3-DH-cTt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Fa-dP-Gez">
+                                            <rect key="frame" x="136" y="0.0" width="258" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="blacktea" id="4Gf-HL-KtR">
+                                            <rect key="frame" x="20" y="0.0" width="101" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="Zmu-SM-B2z"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="green" textLabel="afn-65-BUM" imageView="T8b-sX-qvS" rowHeight="100" style="IBUITableViewCellStyleDefault" id="08v-xV-CH6">
+                                <rect key="frame" x="0.0" y="128" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="08v-xV-CH6" id="kVn-cL-Awg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="afn-65-BUM">
+                                            <rect key="frame" x="135" y="0.0" width="259" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="greentea" id="T8b-sX-qvS">
+                                            <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="LeA-Km-3R0"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="herbal" textLabel="zrO-RU-Tvc" imageView="Hee-K2-5Sy" rowHeight="100" style="IBUITableViewCellStyleDefault" id="ctN-9s-jr2">
+                                <rect key="frame" x="0.0" y="228" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ctN-9s-jr2" id="ryP-FP-SYi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zrO-RU-Tvc">
+                                            <rect key="frame" x="135" y="0.0" width="259" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="herabltea" id="Hee-K2-5Sy">
+                                            <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="goY-9m-nP9"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oolong" textLabel="z71-IT-KcZ" imageView="624-Tn-OQW" rowHeight="100" style="IBUITableViewCellStyleDefault" id="Z00-FW-4dT">
+                                <rect key="frame" x="0.0" y="328" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z00-FW-4dT" id="lKe-5t-TBo">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z71-IT-KcZ">
+                                            <rect key="frame" x="135" y="0.0" width="259" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="oolongtea" id="624-Tn-OQW">
+                                            <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="UoQ-6O-rcP"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="white" textLabel="8Bh-9k-Ker" imageView="WIh-Kp-l2X" rowHeight="100" style="IBUITableViewCellStyleDefault" id="AIE-NM-b1v">
+                                <rect key="frame" x="0.0" y="428" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AIE-NM-b1v" id="wtB-ZF-V04">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Bh-9k-Ker">
+                                            <rect key="frame" x="135" y="0.0" width="259" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="whitetea" id="WIh-Kp-l2X">
+                                            <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="ghT-Gt-D0h"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="yellow" textLabel="uUL-5E-sbG" imageView="oOI-Lo-Nbp" rowHeight="100" style="IBUITableViewCellStyleDefault" id="7q2-7N-Vio">
+                                <rect key="frame" x="0.0" y="528" width="414" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7q2-7N-Vio" id="pCv-0N-1gT">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uUL-5E-sbG">
+                                            <rect key="frame" x="135" y="0.0" width="259" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="yellowtea" id="oOI-Lo-Nbp">
+                                            <rect key="frame" x="20" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="qcE-2P-MXW" kind="show" id="you-rk-1mb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4WE-dx-Eub" id="W1q-ab-Mh5"/>
+                            <outlet property="delegate" destination="4WE-dx-Eub" id="2C6-el-d6V"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Learn More" image="leaf.fill" catalog="system" id="4mZ-y6-eR3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAh-ch-dvE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="238"/>
+        </scene>
+        <!--Tea View Controller-->
+        <scene sceneID="8J6-lg-O8O">
+            <objects>
+                <viewController id="qcE-2P-MXW" customClass="TeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5z-Hz-xPC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojK-Ft-VuQ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DNE-kK-0mJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1380"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sq4-UK-skN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                                <color key="backgroundColor" red="0.6159859486" green="0.55644194219999998" blue="0.7104872887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="mJb-Pb-euV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gkj-Cc-gkb">
+                                                <rect key="frame" x="0.0" y="70" width="414" height="350"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="630-bM-AsR">
+                                                        <rect key="frame" x="8" y="8" width="398" height="46.5"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="whatisitLabel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIh-Kw-Z05">
+                                                        <rect key="frame" x="15" y="54" width="384" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="630-bM-AsR" firstAttribute="top" secondItem="gkj-Cc-gkb" secondAttribute="top" constant="8" id="Bb4-Pb-bi5"/>
+                                                    <constraint firstItem="630-bM-AsR" firstAttribute="leading" secondItem="gkj-Cc-gkb" secondAttribute="leading" constant="8" id="Ffg-Mu-z8K"/>
+                                                    <constraint firstAttribute="height" constant="350" id="Hgk-bx-1D9"/>
+                                                    <constraint firstItem="HIh-Kw-Z05" firstAttribute="top" secondItem="gkj-Cc-gkb" secondAttribute="top" constant="54" id="JAm-8K-bVy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="630-bM-AsR" secondAttribute="trailing" constant="8" id="Tbl-TJ-RhX"/>
+                                                    <constraint firstItem="HIh-Kw-Z05" firstAttribute="leading" secondItem="gkj-Cc-gkb" secondAttribute="leading" constant="15" id="uqx-0B-GWy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HIh-Kw-Z05" secondAttribute="trailing" constant="15" id="vnz-zP-fgc"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-xx-7Yx">
+                                                <rect key="frame" x="0.0" y="420" width="414" height="400"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How is it made?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVx-dE-25m">
+                                                        <rect key="frame" x="0.0" y="8" width="414" height="46.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="howitsmadeLabel" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bfk-dt-USL">
+                                                        <rect key="frame" x="15" y="54" width="384" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Bfk-dt-USL" firstAttribute="leading" secondItem="1vU-xx-7Yx" secondAttribute="leading" constant="15" id="01v-Pg-DxU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Bfk-dt-USL" secondAttribute="trailing" constant="15" id="UnM-4B-OWx"/>
+                                                    <constraint firstAttribute="height" constant="400" id="Xf4-CK-J1x"/>
+                                                    <constraint firstItem="Bfk-dt-USL" firstAttribute="top" secondItem="1vU-xx-7Yx" secondAttribute="top" constant="54" id="u5V-c2-uub"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ETL-f8-eLK">
+                                                <rect key="frame" x="0.0" y="820" width="414" height="160"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brewing a Perfect Cup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVq-6g-ioM">
+                                                        <rect key="frame" x="8" y="8" width="398" height="46.5"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brewLabel" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kg-XW-GDs">
+                                                        <rect key="frame" x="15" y="54" width="384" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="7kg-XW-GDs" firstAttribute="leading" secondItem="ETL-f8-eLK" secondAttribute="leading" constant="15" id="5ID-K1-leW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jVq-6g-ioM" secondAttribute="trailing" constant="8" id="HDg-1T-nhT"/>
+                                                    <constraint firstAttribute="height" constant="160" id="So5-nr-PWU"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7kg-XW-GDs" secondAttribute="trailing" constant="15" id="WpP-fO-FCC"/>
+                                                    <constraint firstItem="jVq-6g-ioM" firstAttribute="leading" secondItem="ETL-f8-eLK" secondAttribute="leading" constant="8" id="ZZs-ln-plz"/>
+                                                    <constraint firstItem="7kg-XW-GDs" firstAttribute="top" secondItem="ETL-f8-eLK" secondAttribute="top" constant="54" id="hON-4f-0dZ"/>
+                                                    <constraint firstItem="jVq-6g-ioM" firstAttribute="top" secondItem="ETL-f8-eLK" secondAttribute="top" constant="8" id="l8b-VI-2S2"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UGV-mA-UIi">
+                                                <rect key="frame" x="0.0" y="980" width="414" height="400"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fun Facts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfH-W8-SZj">
+                                                        <rect key="frame" x="0.0" y="8" width="414" height="46.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="funfactsLabel" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGh-eS-UmP">
+                                                        <rect key="frame" x="15" y="54" width="384" height="24"/>
+                                                        <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="26"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="xGh-eS-UmP" firstAttribute="top" secondItem="UGV-mA-UIi" secondAttribute="top" constant="54" id="ADK-Wi-lQJ"/>
+                                                    <constraint firstAttribute="height" constant="400" id="CfX-79-taU"/>
+                                                    <constraint firstItem="xGh-eS-UmP" firstAttribute="leading" secondItem="UGV-mA-UIi" secondAttribute="leading" constant="15" id="rHn-qC-aKW"/>
+                                                    <constraint firstAttribute="trailing" secondItem="xGh-eS-UmP" secondAttribute="trailing" constant="15" id="vU2-0U-OGa"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="1vU-xx-7Yx" secondAttribute="trailing" id="JOt-0F-EKj"/>
+                                            <constraint firstItem="1vU-xx-7Yx" firstAttribute="leading" secondItem="DNE-kK-0mJ" secondAttribute="leading" id="Pxz-s9-haM"/>
+                                            <constraint firstItem="1vU-xx-7Yx" firstAttribute="top" secondItem="gkj-Cc-gkb" secondAttribute="bottom" id="SZ7-U1-mDT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="DNE-kK-0mJ" firstAttribute="top" secondItem="oxh-SG-Vof" secondAttribute="top" id="Kf0-KR-CDp"/>
+                                    <constraint firstItem="DNE-kK-0mJ" firstAttribute="leading" secondItem="oxh-SG-Vof" secondAttribute="leading" id="Qst-dq-skI"/>
+                                    <constraint firstItem="DNE-kK-0mJ" firstAttribute="trailing" secondItem="oxh-SG-Vof" secondAttribute="trailing" id="S3r-a4-297"/>
+                                    <constraint firstItem="DNE-kK-0mJ" firstAttribute="width" secondItem="Sjf-Oh-L30" secondAttribute="width" id="Ytf-4x-Vma"/>
+                                    <constraint firstItem="DNE-kK-0mJ" firstAttribute="bottom" secondItem="oxh-SG-Vof" secondAttribute="bottom" id="spu-DK-XuC"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="oxh-SG-Vof"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Sjf-Oh-L30"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1dZ-CM-Te0"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ojK-Ft-VuQ" secondAttribute="bottom" id="Hxw-Db-j9F"/>
+                            <constraint firstItem="ojK-Ft-VuQ" firstAttribute="leading" secondItem="1dZ-CM-Te0" secondAttribute="leading" id="dDS-RC-NBg"/>
+                            <constraint firstItem="ojK-Ft-VuQ" firstAttribute="top" secondItem="L5z-Hz-xPC" secondAttribute="top" id="hMU-f6-r3z"/>
+                            <constraint firstItem="ojK-Ft-VuQ" firstAttribute="trailing" secondItem="1dZ-CM-Te0" secondAttribute="trailing" id="ryc-2I-ep0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t0U-gY-RCQ"/>
+                    <connections>
+                        <outlet property="TitleLabel" destination="sq4-UK-skN" id="CIJ-mZ-iPY"/>
+                        <outlet property="brewLabel" destination="7kg-XW-GDs" id="cz9-bf-edK"/>
+                        <outlet property="brewSectionLabel" destination="jVq-6g-ioM" id="INA-im-Leb"/>
+                        <outlet property="factsSectionLabel" destination="YfH-W8-SZj" id="leM-UO-6Go"/>
+                        <outlet property="funfactsLabel" destination="xGh-eS-UmP" id="CqT-MG-cmP"/>
+                        <outlet property="howSectionLabel" destination="LVx-dE-25m" id="N03-Gd-BgT"/>
+                        <outlet property="howisitmadeLabel" destination="Bfk-dt-USL" id="rky-ab-LcR"/>
+                        <outlet property="whatSectionLabel" destination="630-bM-AsR" id="oxv-IB-DTL"/>
+                        <outlet property="whatisitLabel" destination="HIh-Kw-Z05" id="0rj-6H-k63"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5Z-it-VFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="238"/>
+        </scene>
+        <!--Herbal Tea View Controller-->
+        <scene sceneID="chW-ZH-Cld">
+            <objects>
+                <viewController storyboardIdentifier="herbaltea" id="8Qe-ZE-mo9" customClass="HerbalTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="331-BH-PwI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HerbalTea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3mb-Xa-BfN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDe-Ur-WO5">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Herbal tea, which is not a 'true tea' like black, green, oolong, etc., is a combinations of other herbs, spices, and other plant material. These herbal teas, lesser known as 'tisanes', is a variation of the plant 'Theaeae' which dates all the way back to an origin point of China and Southeast Asia. Herbal tea is caffiene free and known for its calming properties which makes it the perfect drink for the evening or when wanting to relax.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="herabltea" translatesAutoresizingMaskIntoConstraints="NO" id="Ckd-Fr-0XI">
+                                <rect key="frame" x="94" y="147" width="225" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KBb-2W-FTY"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n7z-Cu-0wq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="233"/>
+        </scene>
+        <!--Yellow Tea View Controller-->
+        <scene sceneID="tm6-1q-A0x">
+            <objects>
+                <viewController storyboardIdentifier="yellowtea" id="0EN-01-NDW" customClass="YellowTeaViewController" customModule="TeaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="93v-0y-Ata">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yellow Tea" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmI-7E-R3y">
+                                <rect key="frame" x="0.0" y="44" width="414" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOf-It-q9W">
+                                <rect key="frame" x="20" y="322" width="374" height="252.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Yellow tea is a rare tea that can be found maininly in China. It is very similar to green tea in respect to the flavors being more mellow and earthy. It is the least known type of tea due to it being hard to find outside of China, this makes it one of the most expensive teas to buy.</string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yellowtea" translatesAutoresizingMaskIntoConstraints="NO" id="2gP-NK-Pkz">
+                                <rect key="frame" x="94" y="147" width="225" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3o7-hV-WlF"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2V-IL-6Zp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2548" y="232"/>
+        </scene>
+        <!--blacktearesult-->
+        <scene sceneID="KHz-tB-inj">
+            <objects>
+                <tabBarController title="blacktearesult" id="RsI-OA-6xe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="UZb-i6-v40">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.61598594862451161" green="0.55644194217332987" blue="0.7104872886580651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Jsa-uw-JZl" kind="relationship" relationship="viewControllers" id="vbF-mX-brt"/>
+                        <segue destination="4WE-dx-Eub" kind="relationship" relationship="viewControllers" id="8e8-FX-G8h"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="zbm-6e-d4s"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsG-tc-Xa8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="-99"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Zmu-SM-B2z"/>
+        <segue reference="LGj-7N-Fa9"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="blacktea" width="225" height="224"/>
+        <image name="greentea" width="225" height="225"/>
+        <image name="herabltea" width="500" height="500"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="leaf.fill" catalog="system" width="128" height="106"/>
+        <image name="oolongtea" width="225" height="225"/>
+        <image name="person.fill.questionmark" catalog="system" width="128" height="104"/>
+        <image name="teaset" width="1280" height="649"/>
+        <image name="whitetea" width="500" height="500"/>
+        <image name="yellowtea" width="500" height="500"/>
+    </resources>
+</document>

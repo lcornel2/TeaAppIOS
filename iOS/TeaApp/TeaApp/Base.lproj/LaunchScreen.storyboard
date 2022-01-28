@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to TeaTime!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsV-Yk-3TI">
+                                <rect key="frame" x="20" y="64" width="374" height="180"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="58"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemGreenColor"/>
+                                <size key="shadowOffset" width="2" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvJ-ET-DNA">
+                                <rect key="frame" x="50" y="263" width="315" height="88"/>
+                                <string key="text">Whether you want to learn more about your favorite drink or you don't know where to begin we've got you covered here at TeaTime! </string>
+                                <fontDescription key="fontDescription" name="AppleSymbols" family="Apple Symbols" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="09f-cx-V89">
+                                <rect key="frame" x="79.5" y="604" width="255" height="59"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="30"/>
+                                <size key="titleShadowOffset" width="3" height="1"/>
+                                <state key="normal" title="Let's Get Steeping!">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" systemColor="systemGreenColor"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teaset" translatesAutoresizingMaskIntoConstraints="NO" id="xae-An-nIY">
+                                <rect key="frame" x="20" y="359" width="374" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="212" id="XKA-6j-2uX"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.86699080819999996" green="0.78318352920000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hsV-Yk-3TI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3cZ-8g-HwR"/>
+                            <constraint firstItem="xae-An-nIY" firstAttribute="centerX" secondItem="09f-cx-V89" secondAttribute="centerX" id="AjX-w0-ZjM"/>
+                            <constraint firstItem="xae-An-nIY" firstAttribute="trailing" secondItem="hsV-Yk-3TI" secondAttribute="trailing" id="ILd-2N-mCp"/>
+                            <constraint firstItem="09f-cx-V89" firstAttribute="top" secondItem="xae-An-nIY" secondAttribute="bottom" constant="33" id="J3g-zq-S8w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hsV-Yk-3TI" secondAttribute="trailing" constant="20" id="bv9-2T-9ho"/>
+                            <constraint firstItem="vvJ-ET-DNA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="dsi-jn-LId"/>
+                            <constraint firstItem="xae-An-nIY" firstAttribute="leading" secondItem="hsV-Yk-3TI" secondAttribute="leading" id="fJ4-gj-frJ"/>
+                            <constraint firstItem="vvJ-ET-DNA" firstAttribute="top" secondItem="hsV-Yk-3TI" secondAttribute="bottom" constant="19" id="jup-dA-khA"/>
+                            <constraint firstItem="xae-An-nIY" firstAttribute="top" secondItem="vvJ-ET-DNA" secondAttribute="bottom" constant="8" symbolic="YES" id="lBU-9x-Vgf"/>
+                            <constraint firstItem="hsV-Yk-3TI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nOA-uD-5XK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vvJ-ET-DNA" secondAttribute="trailing" constant="49" id="u8F-zI-NcH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="teaset" width="1280" height="649"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
